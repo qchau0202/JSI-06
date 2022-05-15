@@ -1,21 +1,22 @@
 import React, {useState} from 'react';
-import TodoComponent from './components/TodoComponent';
-import Login from './components/Login';
-
+import DemoNextUi from './components/DemoNextUi';
+// import TodoComponent from './components/TodoComponent';
+// import Login from './components/Login';
 const App = () => {
-  const [isLogin, setIslogin] = useState(false)
+  // const [isLogin, setIslogin] = useState(false)
   
-  const onClickHandler = () => {
-     setIslogin(!isLogin)
-  }
+  // const onClickHandler = () => {
+  //    setIslogin(!isLogin)
+  // }
   return (
-    <div className="App">
-      {isLogin === true ? <TodoComponent/> : <Login/>}
+    // <div className="App">
+    //   {isLogin === true ? <TodoComponent/> : <Login/>}
 
-      <button onClick={onClickHandler}>
-        {isLogin === true ? 'Log out':'Login'}
-      </button>
-    </div>
+    //   <button onClick={onClickHandler}>
+    //     {isLogin === true ? 'Log out':'Login'}
+    //   </button>
+    // </div>
+<DemoNextUi/>
   );
 }
 
