@@ -1,15 +1,20 @@
-import './App.css';
-import Header from './Header.js'
-import ProductList from './ProductList.js'
-import Trend from './LastestTrend.js'
-import Footer from './Footer';
-function App() {
+import React, {useState} from 'react';
+import TodoComponent from './components/TodoComponent';
+import Login from './components/Login';
+
+const App = () => {
+  const [isLogin, setIslogin] = useState(false)
+  
+  const onClickHandler = () => {
+     setIslogin(!isLogin)
+  }
   return (
     <div className="App">
-      <Header/>
-      <ProductList/>
-      <Trend/>
-      <Footer/> 
+      {isLogin === true ? <TodoComponent/> : <Login/>}
+
+      <button onClick={onClickHandler}>
+        {isLogin === true ? 'Log out':'Login'}
+      </button>
     </div>
   );
 }
